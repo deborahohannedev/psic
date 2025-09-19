@@ -22,6 +22,9 @@
                 <a href="#blog">Blog</a>
                 <a href="#contato-faq">Contato</a>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </header>
 
@@ -90,23 +93,29 @@
             <div class="professionals-grid">
                 <div class="professional-card">
                     <img src="assets/images/psicologa1.png" alt="Foto do Psicólogo João Silva" class="profile-photo">
-                    <h3>Dra. Layane Pix</h3>
-                    <p class="specialty">Ansiedade, Depressão</p>
-                    <p class="approach">Terapia Cognitivo-Comportamental</p>
+                    <div class="professional-content">
+                        <h3>Dra. Layane Pix</h3>
+                        <p class="specialty">Ansiedade, Depressão</p>
+                        <p class="approach">Terapia Cognitivo-Comportamental</p>
+                    </div>
                     <a href="#" class="view-profile-btn">Ver Perfil Completo</a>
                 </div>
                 <div class="professional-card">
                     <img src="assets/images/psicologa2.png" alt="Foto da Psicóloga Vitória Cão" class="profile-photo">
-                    <h3>Dra. Vitória Cão</h3>
-                    <p class="specialty">Autoconhecimento, Relacionamentos</p>
-                    <p class="approach">Psicanálise</p>
+                    <div class="professional-content">
+                        <h3>Dra. Vitória Cão</h3>
+                        <p class="specialty">Autoconhecimento, Relacionamentos</p>
+                        <p class="approach">Psicanálise</p>
+                    </div>
                     <a href="#" class="view-profile-btn">Ver Perfil Completo</a>
                 </div>
                 <div class="professional-card">
                     <img src="assets/images/psicologo.png" alt="Foto do Psicólogo Carlos Oliveira" class="profile-photo">
-                    <h3>Dr. Carlos Oliveira</h3>
-                    <p class="specialty">TDAH, Transtornos Alimentares</p>
-                    <p class="approach">Terapia Humanista</p>
+                    <div class="professional-content">
+                        <h3>Dr. Carlos Oliveira</h3>
+                        <p class="specialty">TDAH, Transtornos Alimentares</p>
+                        <p class="approach">Terapia Humanista</p>
+                    </div>
                     <a href="#" class="view-profile-btn">Ver Perfil Completo</a>
                 </div>
             </div>
@@ -222,6 +231,13 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
+
         const animatedElements = document.querySelectorAll('.step-card, .professional-card, .testimonial-card, .blog-card, .hero-content, section');
 
         const observer = new IntersectionObserver((entries) => {

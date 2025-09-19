@@ -1,0 +1,262 @@
+/* Importações de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+/* Importações dos Componentes */
+@import url('../../components/Header/header.css');
+@import url('../../components/ComoFunciona/comofunciona.css');
+@import url('../../components/Professionals/professionals.css');
+@import url('../../components/Testimonials/testimonials.css');
+@import url('../../components/Blog/blog.css');
+@import url('../../components/Contact-FAQ/contact-faq.css');
+
+/* Estilos Globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* borda removida */
+}
+
+/* Estilos de Título Comuns */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #1a4f78;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+/* Garante que a imagem se ajuste ao contêiner */
+.logo img {
+    max-width: 100px; /* Reduzido para deixar a logo menor */
+    height: auto;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.hero {
+    padding-top: 120px; /* Aumentado para 120px */
+}
+
+.header {
+    max-height: 100px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a4f78;
+    margin-bottom: 18px;
+}
+
+.banner-img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(26,79,120,0.08);
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #1a4f78 0%, #4fc3f7 100%);
+    color: #fff;
+    animation: bannerFadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes bannerFadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+}
+
+.como-funciona-section, .professionals-section, .testimonials-section, .blog-section, .contact-faq-section {
+    padding-top: 120px;
+}
+
+.step-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.step-icon svg {
+    width: 72px;
+    height: 72px;
+}
+
+.step-card {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: stepFadeIn 0.8s ease forwards;
+}
+
+.step-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.step-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.step-card:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes stepFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cta-button {
+    background: linear-gradient(90deg, #1a4f78 0%, #4fc3f7 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(26,79,120,0.12);
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #4fc3f7 0%, #1a4f78 100%);
+}
+
+.nav-menu a {
+    color: #1a4f78;
+}
+
+.nav-menu a:hover {
+    color: #4fc3f7;
+}
+
+/* Animação para cartões de psicólogos */
+.professional-card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: cardFadeIn 0.8s ease forwards;
+}
+.professionals-grid .professional-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.professionals-grid .professional-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.professionals-grid .professional-card:nth-child(3) {
+    animation-delay: 0.8s;
+}
+@keyframes cardFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação para depoimentos */
+.testimonial-card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: depoFadeIn 0.8s ease forwards;
+}
+.testimonials-container .testimonial-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.testimonials-container .testimonial-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.testimonials-container .testimonial-card:nth-child(3) {
+    animation-delay: 0.8s;
+}
+@keyframes depoFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação para artigos do blog */
+.blog-card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: blogFadeIn 0.8s ease forwards;
+}
+.blog-grid .blog-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.blog-grid .blog-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.blog-grid .blog-card:nth-child(3) {
+    animation-delay: 0.8s;
+}
+@keyframes blogFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 0 16px 0;
+    background: #f8f8f8;
+    text-align: center;
+    color: #1a4f78;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 48px;
+}

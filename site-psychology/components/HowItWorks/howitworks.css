@@ -1,0 +1,58 @@
+.how-it-works-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f8f8; /* Background color for emphasis */
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #1a4f78;
+    margin-bottom: 50px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Spacing between cards */
+    flex-wrap: wrap; /* Allows cards to wrap to a new line on smaller screens */
+}
+
+.step-card {
+    flex: 1;
+    min-width: 280px; /* Ensures cards don't get too small */
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.step-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.step-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #1a4f78;
+    font-size: 20px;
+}
+
+.step-card p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Basic responsiveness */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

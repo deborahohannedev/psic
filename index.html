@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua Plataforma de Psicologia</title>
@@ -29,11 +28,14 @@
     <section id="hero" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Seu bem-estar em foco: encontre o psicólogo ideal.</h2>
+                <h2>
+                    Seu bem-estar em foco:<br>
+                    <span>Encontre o psicólogo ideal para transformar sua vida</span>
+                </h2>
                 <div class="hero-banner">
-                    <img src="assets/images/banner.jpeg" alt="Banner Psicologia" class="banner-img">
+                    <img src="assets/images/banner1.png" alt="Banner Psicologia" class="banner-img">
                 </div>
-                <p>Terapia online, flexível e segura, para você.</p>
+                <p class="hero-subtitle">Terapia online, flexível e segura, para você.</p>
                 <a href="#profissionais" class="cta-button">Agendar minha consulta</a>
             </div>
         </div>
@@ -117,10 +119,10 @@
             <div class="testimonials-container">
                 <div class="testimonial-card">
                     <p class="testimonial-text">
-                        "Eu me sentia completamente sobrecarregado(a) pela ansiedade, mas a terapia me ajudou a entender a raiz dos meus medos. Agora, me sinto mais no controle das minhas emoções e vivo com mais leveza."
+                        "Disse que eu sou ariana. Eu sou e crente !"
                     </p>
                     <p class="testimonial-author">
-                        — J. D.
+                        — L. P.
                     </p>
                 </div>
                 <div class="testimonial-card">
@@ -129,6 +131,14 @@
                     </p>
                     <p class="testimonial-author">
                         — M. S.
+                    </p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Começar a terapia foi a melhor decisão que tomei por mim. Meu psicólogo me proporcionou um espaço seguro para trabalhar minha autoestima. Eu finalmente me sinto confiante e pronto(a) para enfrentar novos desafios."
+                    </p>
+                    <p class="testimonial-author">
+                        — S. P.
                     </p>
                 </div>
                 <div class="testimonial-card">
@@ -182,70 +192,57 @@
     </section>
 
     <section id="contato-faq" class="contact-faq-section">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato ou Encontre sua Resposta</h2>
-            <div class="contact-faq-container">
-                <div class="contact-form-card">
-                    <h3>Envie-nos uma Mensagem</h3>
-                    <form class="contact-form">
-                        <input type="text" name="name" placeholder="Seu Nome" required>
-                        <input type="email" name="email" placeholder="Seu E-mail" required>
-                        <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
-                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
-                    </form>
-                </div>
-                <div class="faq-card">
-                    <h3>Perguntas Frequentes</h3>
-                    <div class="faq-item">
-                        <details>
-                            <summary>A terapia online é segura?</summary>
-                            <p>Sim, todas as nossas sessões de vídeo são criptografadas de ponta a ponta para garantir sua privacidade e confidencialidade. Usamos uma plataforma segura que está em conformidade com todas as regulamentações profissionais.</p>
-                        </details>
-                    </div>
-                    <div class="faq-item">
-                        <details>
-                            <summary>Qual o valor de uma sessão?</summary>
-                            <p>O valor de cada sessão é definido pelo próprio profissional. Você pode ver os preços nos perfis individuais. Aceitamos vários métodos de pagamento, incluindo cartão de crédito e PIX.</p>
-                        </details>
-                    </div>
-                    <div class="faq-item">
-                        <details>
-                            <summary>E se eu não me conectar com o psicólogo?</summary>
-                            <p>Encontrar o profissional certo é fundamental. Se a sua primeira sessão não atender às suas expectativas, incentivamos você a procurar outros perfis até encontrar um psicólogo com quem se sinta à vontade. Não há obrigação de continuar.</p>
-                        </details>
-                    </div>
-                </div>
+        <div class="container contact-faq-container">
+            <div class="contact-form-card">
+                <h3>Fale Conosco</h3>
+                <form class="contact-form">
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+                    <button type="submit" class="submit-btn">Enviar</button>
+                </form>
+            </div>
+            <div class="faq-card">
+                <h3>Perguntas Frequentes</h3>
+                <details class="faq-item">
+                    <summary>Como funciona a terapia online?</summary>
+                    <p>Você agenda, paga e realiza sua sessão por videochamada, tudo de forma segura e prática.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Posso escolher o psicólogo?</summary>
+                    <p>Sim! Você pode navegar pela nossa rede e escolher o profissional que melhor se encaixa nas suas necessidades.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Como é feito o pagamento?</summary>
+                    <p>O pagamento é realizado online, de forma segura, diretamente pela plataforma.</p>
+                </details>
             </div>
         </div>
     </section>
 
     <script>
-    // Função para ativar animação ao entrar na viewport
-    function animateOnScroll(selector) {
-      const elements = document.querySelectorAll(selector);
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.animationPlayState = 'running';
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-      elements.forEach(el => {
-        el.style.animationPlayState = 'paused';
-        observer.observe(el);
-      });
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+        const animatedElements = document.querySelectorAll('.step-card, .professional-card, .testimonial-card, .blog-card, .hero-content, section');
 
-    document.addEventListener('DOMContentLoaded', function() {
-      animateOnScroll('.professional-card');
-      animateOnScroll('.testimonial-card');
-      animateOnScroll('.blog-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        animatedElements.forEach(el => {
+            observer.observe(el);
+        });
     });
     </script>
 
 </body>
     <footer class="site-footer">
-        <span>Copyright © 2025 OHANNE TECNOLOGIA</span>
+                <span>Copyright © 2025 OHANNE TECNOLOGIA</span>
     </footer>
 </html>

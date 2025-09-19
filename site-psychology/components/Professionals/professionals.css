@@ -1,0 +1,68 @@
+.professionals-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.professionals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.professional-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.professional-card:hover {
+    transform: translateY(-10px);
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #1a4f78;
+}
+
+.professional-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #1a4f78;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.specialty,
+.approach {
+    color: #555;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.view-profile-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.view-profile-btn:hover {
+    background-color: #45a049;
+}
+
+/* Base styles for the main container and titles (already defined in styles.css) */
+/* .container { ... } */
+/* .section-title { ... } */

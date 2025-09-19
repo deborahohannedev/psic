@@ -1,0 +1,45 @@
+
+.header {
+    background-color: #f8f8f8; /* Fundo cinza claro */
+    padding: 20px 0;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Removido seletor incorreto 'logo' sem ponto */
+
+.logo img {
+    height: 60px;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Garante que o menu fique à direita */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto !important;
+    gap: 25px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #1a4f78; /* Mudar cor ao passar o mouse */
+}

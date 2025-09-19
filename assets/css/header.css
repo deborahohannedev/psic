@@ -1,26 +1,30 @@
-
 .header {
     background-color: #f8f8f8; /* Fundo cinza claro */
-    padding: 20px 0;
+    height: 80px; /* Altura fixa para o cabeçalho */
+    padding: 10px 0; /* Ajuste no padding vertical */
     position: fixed; /* Fixa o cabeçalho no topo */
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    display: flex; /* Adicionado para centralizar o container */
+    align-items: center; /* Adicionado para centralizar o container */
 }
 
 .header .container {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Adicionado para alinhar os itens */
     width: 100%;
 }
 
 /* Removido seletor incorreto 'logo' sem ponto */
 
 .logo img {
-    height: 60px;
-    max-height: 100%;
+    max-width: 90px;
+    max-height: 60px;
     width: auto;
+    height: auto;
     object-fit: contain;
     display: block;
 }
@@ -42,4 +46,88 @@
 
 .nav-menu a:hover {
     color: #1a4f78; /* Mudar cor ao passar o mouse */
+}
+
+/* Estilos para o menu hambúrguer */
+.menu-toggle {
+    display: none; /* Escondido por padrão */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 15px;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    left: 0;
+    transition: transform 0.3s, top 0.3s, bottom 0.3s;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+/* Animação do Hambúrguer para 'X' */
+.nav-menu.active + .menu-toggle .hamburger {
+    background-color: transparent;
+}
+
+.nav-menu.active + .menu-toggle .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.nav-menu.active + .menu-toggle .hamburger::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Alinha o menu para baixo do header */
+        left: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão em telas pequenas */
+    }
 }
